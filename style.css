@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+
+body {
+	margin: 0;
+	font-family: 'Caveat', cursive;
+	/*background: #f0d6cb;*/
+	background: url('https://images.wallpaperscraft.ru/image/single/poligon_low_poly_art_130453_1920x1200.jpg') ;
+	color: #4b2d9a;
+	user-select: none; 
+	overflow: hidden;
+}
+
+nav {
+	margin: 0 0 10px;
+	width:100%;
+	display: flex;
+	justify-content: space-around;
+	font-size: 40px;
+	background: #fffff1;
+/*	background: yellow;
+	box-shadow: 0 -200px 100px -120px cyan inset;*/
+	animation: gradient 5s infinite ease-in-out;
+	border-bottom: 2px solid rgba(11, 105, 105, 1);
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	transition: background 0.5s;
+}
+
+nav div{
+	cursor: pointer;
+}
+
+.newGame {
+	display: none;
+}
+
+
+.mainGold {
+	color: goldenrod;
+}
+
+.helpBox {
+	display: none;
+	position: absolute; 
+	top: 5rem;
+	left: 5%;
+	width:90%;
+	font-size: 40px;
+	text-align: center;
+	cursor: pointer;
+	border: 2px solid rgba(11, 105, 105, 0.6);
+	border-radius: 40px;
+	box-shadow: 8px 8px 5px -5px rgba(11, 105, 105, 0.6);
+	background: #fffff1;
+}
+
+li{
+	list-style-type: none;
+}
+
+.closeHelpBox{
+	margin: 10px  auto;
+	width:20%;
+	font-size: 40px;
+	text-align: center;
+	cursor: pointer;
+	border: 2px solid rgba(11, 105, 105, 0.6);
+	border-radius: 40px;
+	transition: background 0.5s;
+	box-shadow: 8px 8px 5px -5px rgba(11, 105, 105, 0.6);
+	background: #fffff1;
+	transition: margin 0.5s ease-out;
+}
+
+/*
+@keyframes gradient {
+	50% {
+		background: yellowgreen;
+    	box-shadow: 0 -200px 100px -100px skyblue inset;
+	}
+}
+*/
+
+.containerForHeroes{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	width: 60%;
+	margin: 0 auto ;
+	gap:10px;
+}
+
+.hero{
+	border: 2px solid rgba(11, 105, 105, 0.6);
+	border-radius:30px;
+	max-width:350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	cursor: pointer;
+	transition: background 0.5s;
+	box-shadow: 8px 8px 5px -5px rgba(11, 105, 105, 0.6);
+	background: #fffff1;
+}
+
+.hero:active{
+	box-shadow: none;
+}
+
+.hero:hover .hero_phrase{
+	display: block;
+}
+
+.hero_phrase{
+	position: absolute;
+	top: 240px;
+	margin-left: 30px;
+	display: none;
+	font-size:30px;
+}
+
+.hero img{
+	max-width:350px;
+}
+
+.stats-box{
+	display: flex;
+	border: 2px solid rgba(11, 105, 105, 0.6);
+	margin: 0 20px 20px;
+	border-radius: 30px;
+}
+
+.title {
+	padding-left:20px;
+	margin-right: 5%;
+	font-size: 25px;
+}
+
+.title p {
+	margin: 0;
+}
+
+
+.stats {
+	padding-top:30px;
+	display: flex;
+	flex-direction: column;
+	grid-gap: 3px;
+}
+
+input[type=range]{
+
+}
+
+.name {
+	margin-top:5px;
+	text-align: center;
+	font-size: 40px;
+}
+
+.choose-hero {
+	margin: 10px  auto;
+	height: 90px;
+	width:90%;
+	font-size: 40px;
+	text-align: center;
+	cursor: pointer;
+	border: 2px solid rgba(11, 105, 105, 0.6);
+	border-radius: 40px;
+	transition: background 0.5s;
+	box-shadow: 8px 8px 5px -5px rgba(11, 105, 105, 0.6);
+	background: #fffff1;
+}
+
+
+.choose_stats {
+	font-size: 25px;
+	border: 2px solid rgba(11, 105, 105, 0.6);
+	border-radius: 40px;
+	padding: 50px;
+	box-shadow: 8px 8px 5px -5px rgba(11, 105, 105, 0.6);
+	background: #fffff1;
+}
+
+.bonusStats {
+	padding-left: 10px;
+	border: 2px solid rgba(11, 105, 105, 0.6);
+	border-radius: 20px;
+	cursor: pointer;
+	margin: 5px;
+	transition: background 0.5s;
+	box-shadow: 8px 8px 5px -5px rgba(11, 105, 105, 0.6);
+}
+
+.bonusStats:active {
+	box-shadow: none;
+}
+
+
+.hoverBg:hover{
+	background: lightcyan;
+	transition: background 0.5s;
+}
+
+.startGame {
+	margin: 10px  auto;
+	width:40%;
+	font-size: 40px;
+	text-align: center;
+	cursor: pointer;
+	border: 2px solid rgba(11, 105, 105, 0.6);
+	border-radius: 40px;
+	transition: background 0.5s;
+	box-shadow: 8px 8px 5px -5px rgba(11, 105, 105, 0.6);
+	background: #fffff1;
+	margin-top: 100vh;
+	transition: margin 0.5s ease-out;
+}
+
