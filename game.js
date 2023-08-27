@@ -97,7 +97,9 @@ function fight() {
 		elem[4].children[0].style.transform = 'rotate(-90deg)'
 		setTimeout(() => {contGameplay.classList.add('endGame');
 			contGameplay.classList.remove('contGameplay')
-			contGameplay.innerHTML = 'YOU DIED...'; 
+			contGameplay.style.alignItems = "center"
+  			contGameplay.style.justifyContent = "center"
+			contGameplay.innerHTML = 'YOU DIED...(то есть сдох)'; 
 		}, 1500)
 		return
 	}
@@ -110,6 +112,9 @@ function looting() {
 		setTimeout(() => elem[1].innerHTML = 'Вы, роясь в рюкзаке, теряете равновесие, падаете и ломаете шею', 1000)
 		setTimeout(() => {contGameplay.classList.add('endGame');
 			contGameplay.classList.remove('contGameplay')
+			choose_hero.style.display = "flex"
+  			contGameplay.style.alignItems = "center"
+  			contGameplay.style.justifyContent = "center"
 			contGameplay.innerHTML = 'YOU DIED...'; 
 		}, 4500)
 	} else if (localStorage.getItem(3) >= 4){

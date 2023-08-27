@@ -9,6 +9,8 @@ const help = document.querySelector('.help')
 const helpBox = document.querySelector('.helpBox')
 const closeHelpBox = document.querySelector('.closeHelpBox')
 const newGame = document.querySelector('.newGame')
+const nav = document.querySelector('nav')
+
 
 
 let bonusCount = 5
@@ -34,6 +36,25 @@ function checkStartSettings() {
 		}
 	}
 }
+
+function download () {
+	choose_hero.style.height = "90vh"
+	choose_hero.style.display = "flex"
+  	choose_hero.style.alignItems = "center"
+  	choose_hero.style.justifyContent = "center"
+	for (let i = 0; i < 11; i++){
+		setTimeout(() => {
+			if (i == 10 ){
+				window.location.href = 'game.html'
+			}
+			if (i > 0 ){
+				choose_hero.innerHTML = "ЗАГРУЗКА " + i + "0%"}
+			else { choose_hero.innerHTML = "ЗАГРУЗКА " + i + "%"}
+		}, i*400);
+	}
+	
+}
+
 
 help.addEventListener('click', () => {
 	helpBox.style.display = 'block'
@@ -203,7 +224,10 @@ startGame.addEventListener('click', () => {
 	localStorage.setItem('gold', countGold)
 	localStorage.setItem('checkGameStart', true)
 	// window.location.href = 'file:///D:/%D0%A7%D1%82%D0%BE-%D1%82%D0%BE/%D1%81%D0%B0%D0%B9%D1%82%D1%8B/game2/game.html'
-	window.location.href = 'game.html'
+	setTimeout(() => containerForHeroes.style.display = 'none', 500)
+	setTimeout(() => startGame.style.display = 'none', 500)
+	/* setTimeout(() => nav.style.display = 'none', 500) */
+	setTimeout(() => download(), 1000)
 })
 
 
